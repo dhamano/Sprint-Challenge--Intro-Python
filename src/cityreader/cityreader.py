@@ -127,7 +127,7 @@ def get_coor_2():
         coor2_arr = coor2.split(" ")
     if len(coor2_arr) < 2:
         print("please enter: <lattitude> <longitude>")
-        get_coor_1()
+        get_coor_2()
     else:
         lat2 = float(coor2_arr[0])
         lon2 = float(coor2_arr[1])
