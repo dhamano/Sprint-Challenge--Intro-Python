@@ -32,10 +32,7 @@ def cityreader(cities=[]):
     # `cities` list
     with open('cities.csv', mode='r') as cities_file:
         cities_data = csv.DictReader(cities_file)
-        line_count = 0
         for row in cities_data:
-            if line_count == 0:
-                line_count +=1
             cities.append(City(name=row["city"], lat=row["lat"], lon=row["lng"]))
     
     return cities
@@ -43,8 +40,8 @@ def cityreader(cities=[]):
 cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
-# for c in cities:
-#     print(c)
+for c in cities:
+    print(c)
 
 # STRETCH GOAL!
 #
@@ -136,9 +133,9 @@ def get_coords():
     get_coor_1()
     get_coor_2()
 
-get_coords()
+# get_coords()
 
-city_arr = cityreader_stretch(lat1, lon1, lat2, lon2, cities)
+# city_arr = cityreader_stretch(lat1, lon1, lat2, lon2, cities)
 
-for city in city_arr:
-    print(city)
+# for city in city_arr:
+#     print(city)
